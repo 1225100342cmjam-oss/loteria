@@ -15,4 +15,18 @@ class Tabla {
     final marcadas = List.generate(4, (_) => List.generate(4, (_) => false));
     return Tabla._(filas, marcadas);
   }
+
+  void marcar(Carta carta) {
+    for (var f = 0; f < filas.length; f++) {
+      for (var c = 0; c < filas[f].length; c++) {
+        if (filas[f][c] == carta) {
+          marcadas[f][c] = true;
+          return;
+        }
+      }
+    }
+  }
+
+
+
 }
