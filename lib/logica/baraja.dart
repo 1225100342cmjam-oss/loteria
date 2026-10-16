@@ -21,4 +21,9 @@ class Baraja {
 
   void mezclar() => cartasRestantes.shuffle();
 
+  Carta? cantarSiguiente() {
+    if (cartasRestantes.isEmpty) return null;
+    return cartasRestantes.removeAt(0);
+  }
+
 }

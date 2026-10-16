@@ -21,5 +21,21 @@ void main() {
     expect(idsDespues, idsAntes);
   });
 
+  test('cantarSiguiente entrega una carta y la retira del mazo', () {
+    final baraja = Baraja.crearBarajaCompleta();
+    final total = baraja.cartasRestantes.length;
+    final primera = baraja.cantarSiguiente();
+    expect(primera, isNotNull);
+    expect(baraja.cartasRestantes.length, total - 1);
+  });
+
+  test('cantarSiguiente regresa null cuando ya no hay cartas', () {
+    final baraja = Baraja.crearBarajaCompleta();
+    for (var i = 0; i < 16; i++) {
+      baraja.cantarSiguiente();
+    }
+    expect(baraja.cantarSiguiente(), isNull);
+  });
+
 }
 
