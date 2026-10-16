@@ -1,0 +1,24 @@
+import 'package:flutter_test/flutter_test.dart';
+import 'package:loteria/logica/verificador_patrones.dart';
+
+void main() {
+  test('detecta una linea horizontal completa', () {
+    final marcadas = [
+      [true, true, true, true],
+      [false, false, false, false],
+      [false, false, false, false],
+      [false, false, false, false],
+    ];
+    expect(VerificadorPatrones.hayLinea(marcadas), true);
+  });
+
+  test('no detecta linea si ninguna fila esta completa', () {
+    final marcadas = [
+      [true, true, true, false],
+      [false, false, false, false],
+      [false, false, false, false],
+      [false, false, false, false],
+    ];
+    expect(VerificadorPatrones.hayLinea(marcadas), false);
+  });
+}

@@ -1,6 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:loteria/logica/baraja.dart';
 import 'package:loteria/logica/tabla.dart';
+import 'package:loteria/modelos/carta.dart';
 
 void main() {
   test('una tabla nueva contiene las 16 cartas, sin repetir', () {
