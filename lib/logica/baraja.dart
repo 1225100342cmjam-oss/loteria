@@ -23,7 +23,7 @@ class Baraja {
 
   Carta? cantarSiguiente() {
     if (cartasRestantes.isEmpty) return null;
-    return cartasRestantes.removeAt(0);
+    return cartasRestantes.removeLast();
   }
 
 }
