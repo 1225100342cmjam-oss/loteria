@@ -42,4 +42,24 @@ void main() {
     expect(VerificadorPatrones.hayColumna(marcadas), false);
   });
 
+test('detecta la diagonal principal completa', () {
+    final marcadas = [
+      [true, false, false, false],
+      [false, true, false, false],
+      [false, false, true, false],
+      [false, false, false, true],
+    ];
+    expect(VerificadorPatrones.hayDiagonal(marcadas), true);
+  });
+
+  test('detecta la diagonal secundaria completa', () {
+    final marcadas = [
+      [false, false, false, true],
+      [false, false, true, false],
+      [false, true, false, false],
+      [true, false, false, false],
+    ];
+    expect(VerificadorPatrones.hayDiagonal(marcadas), true);
+  });
+
 }

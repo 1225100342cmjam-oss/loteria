@@ -19,4 +19,15 @@ class VerificadorPatrones {
     return false;
   }
 
+   static bool hayDiagonal(List<List<bool>> marcadas) {
+    final n = marcadas.length;
+    var principal = true;
+    var secundaria = true;
+    for (var i = 0; i < n; i++) {
+      if (!marcadas[i][i]) principal = false;
+      if (!marcadas[i][n - 1 - i]) secundaria = false;
+    }
+    return principal || secundaria;
+  }
+
 }
