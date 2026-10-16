@@ -18,4 +18,7 @@ class Baraja {
     }
     return Baraja._(cartas);
   }
+
+  void mezclar() => cartasRestantes.shuffle();
+
 }

@@ -12,5 +12,14 @@ void main() {
     final idsUnicos = baraja.cartasRestantes.map((c) => c.id).toSet();
     expect(idsUnicos.length, 16);
   });
+
+  test('mezclar conserva las mismas 16 cartas, solo cambia el orden', () {
+    final baraja = Baraja.crearBarajaCompleta();
+    final idsAntes = baraja.cartasRestantes.map((c) => c.id).toSet();
+    baraja.mezclar();
+    final idsDespues = baraja.cartasRestantes.map((c) => c.id).toSet();
+    expect(idsDespues, idsAntes);
+  });
+
 }
 
