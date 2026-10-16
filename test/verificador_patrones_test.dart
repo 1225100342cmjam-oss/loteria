@@ -21,4 +21,25 @@ void main() {
     ];
     expect(VerificadorPatrones.hayLinea(marcadas), false);
   });
+
+  test('detecta una columna vertical completa', () {
+    final marcadas = [
+      [true, false, false, false],
+      [true, false, false, false],
+      [true, false, false, false],
+      [true, false, false, false],
+    ];
+    expect(VerificadorPatrones.hayColumna(marcadas), true);
+  });
+
+  test('no detecta columna si ninguna esta completa', () {
+    final marcadas = [
+      [true, false, false, false],
+      [true, false, false, false],
+      [false, false, false, false],
+      [true, false, false, false],
+    ];
+    expect(VerificadorPatrones.hayColumna(marcadas), false);
+  });
+
 }
