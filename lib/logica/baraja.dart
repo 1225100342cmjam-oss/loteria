@@ -16,7 +16,7 @@ class Baraja {
     for (var i = 0; i < _nombres.length; i++) {
       cartas.add(Carta(id: i, nombre: _nombres[i]));
     }
-    return Baraja._(cartas);
+    return Baraja.desdeCartas(cartas);
   }
 
   void mezclar() => cartasRestantes.shuffle();
@@ -26,4 +26,10 @@ class Baraja {
     return cartasRestantes.removeLast();
   }
 
+  Baraja.desdeCartas(List<Carta> cartas) : cartasRestantes = List<Carta>.from(cartas);
+
+  
+
+
 }
+
