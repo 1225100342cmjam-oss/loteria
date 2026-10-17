@@ -40,6 +40,10 @@ Octava prueba
 <img width="1158" height="354" alt="image" src="https://github.com/user-attachments/assets/f4ef008a-8f23-4dcd-82e1-8d76115e5496" />
 <img width="821" height="613" alt="image" src="https://github.com/user-attachments/assets/71dec6a2-c7de-44e3-99d5-7b1a957053ec" />
 
+PANTALLA FINAL 
+<img width="1919" height="1066" alt="image" src="https://github.com/user-attachments/assets/67023951-398f-425d-837f-0eeecc19f077" />
+
+<img width="1920" height="990" alt="image" src="https://github.com/user-attachments/assets/084b4b00-3833-425c-b135-bb92f89c7e33" />
 
 
 
